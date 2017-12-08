@@ -1,0 +1,365 @@
+/* PIECES & POSITIONS ============================================================== */
+/* board posiion settings */
+.row{
+  margin-top:4%;
+}
+
+.left-col-md{
+  margin-left:-2%;
+}
+
+
+/* ================================================================================= */
+/* CONTROL BTNS -------------------------------------------------------------------- */
+/* nav control buttons at the bottom of page */
+#right-nav-bar{
+  border:1px solid white;
+  background:white;
+  height:80px;
+  margin-left:7%;
+  margin-right:-6%;
+  border-radius:8px;
+
+}
+
+#game-rules-btn, #info-btn, #end-game-btn, #auction-house-btn{
+  list-style-type: none;
+  text-decoration: none;
+  border-radius: 50px;
+  border:2px solid #444;
+  background:none;
+  margin:6% 2.5%;
+  color:#444;
+  position:relative;
+  padding:2px 10px;
+  transition: .3s ease-in-out;
+  font-size: 24px;
+  float:left;
+}
+
+#game-rules-btn:hover, #info-btn:hover, #end-game-btn:hover, #auction-house-btn:hover{
+  transition: .3s ease-in-out;
+  border:2px solid #444;
+  background: #444;
+  color:white;
+  cursor:pointer;
+}
+
+/* =================================================== */
+/* POSITIONING BUTTONS */
+
+#game-rules-btn{
+  font-size:24px;
+  padding: 2px 8px;
+  margin-left:7%;
+}
+
+#auction-house-btn{
+  font-size:20px;
+  padding:5px 8px;
+}
+
+#end-game-btn{
+  color:#C50000;
+  border:2px solid #C50000;
+}
+
+
+#end-game-btn:hover{
+  cursor:pointer;
+  background-color:#C50000;
+  color:white;
+  border:2px solid #C50000;
+  transition:.3s ease-in-out;
+}
+
+/* ================================================================================= */
+/* GENERAL MODAL SETTINGS ========================================================== */
+/* modal settings for game rules */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin:0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* modal content / box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 5%;
+  border: 1px solid white;
+  width: 90%;
+  font-size:14px;
+  text-transform: none;
+}
+
+.modal-content h1{
+  font-size:30px;
+  font-weight:bold;
+  text-transform:uppercase;
+
+  margin-bottom:1%;
+}
+
+.modal-content h2{
+  font-size:24px;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-bottom:1%;
+}
+
+.modal-content p{
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* modal close cutton */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin:-2% 0 0 100%;
+  transition: .2s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+
+
+/* ================================================================================= */
+/* SPECIFIC SETTINGS FOR MODALS ==================================================== */
+/* end game modal settings */
+#end-game-modal .modal-content{
+  width:60%;
+  margin-top:13%;
+  text-align:center;
+
+}
+
+/* NO end game button settings */
+#end-game-modal .modal-content #no-end-game{
+  width:50%;
+  margin-top: 3%;
+  margin-left:25%;
+  padding:10px 15px;
+  border:1px solid #444;
+  background:none;
+  color:#444;
+  transition: .3s ease-in-out;
+}
+
+#end-game-modal .modal-content #no-end-game:hover{
+  border:1px solid #aaa;
+  background:#aaa;
+  color:white;
+  transition: .3s ease-in-out;
+}
+
+/* CONFIRM end game button settings */
+#end-game-modal .modal-content #confirm-end-game{
+  width:50%;
+  margin-top:5%;
+  margin-left:25%;
+  padding:10px 15px;
+  border:1px solid #C50000;
+  background:none;
+  color:#C50000;
+  transition: .3s ease-in-out;
+}
+
+#end-game-modal .modal-content #confirm-end-game:hover{
+  border:1px solid #C50000;
+  background:#C50000;
+  color:white;
+  transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+
+/* ================================================================================= */
+/* USER INFO BTNS & PANEL ---------------------------------------------------------- */
+
+/* panel user-btns */
+.user-btn {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 100%;
+  font-size:13px;
+  text-align: right;
+  border: none;
+  outline: none;
+  text-transform:uppercase;
+  transition: 0.4s ease-in-out;
+  margin-bottom:2%;
+}
+
+/* adding hover effects to btns */
+.user-btn.active, .user-btn:hover {
+  background-color: #ccc;
+  cursor:pointer;
+}
+
+
+/* ------------------------------------------ */
+/* + & x icon for user-btn information */
+.user-btn i{
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  margin-left:2%;
+}
+
+user-btn i.active{
+  animation: spin .3s ease-in-out linear;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(45deg); }
+  100% { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  0%{ -webkit-transform: rotate(45deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@keyframes spin {
+  0% {transform:rotate(45deg);}
+  100% {transform:rotate(0deg);}
+}
+
+
+/* ---------------------------------------------------------- */
+/* Style the accordion panel with user info. Note: hidden by default */
+.pnl {
+  padding: 0 18px;
+  text-align:right;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+
+}
+
+/* =================================================================================== */
+/* PLAYER INFO STYLING  ============================================================== */
+
+/* ------------------------------------------------------- */
+/* game piece */
+.game-piece-title{
+  padding-top:15px;
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.game-piece img{
+  margin-left:78%;
+  margin-bottom:5px;
+  width:19%;
+}
+
+/* ------------------------------------------------------- */
+/* game money */
+.user-money-title{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.user-money{
+  margin-bottom:5px;
+  font-size:14px;
+  color:green;
+  text-transform:none;
+}
+
+/* ------------------------------------------------------- */
+/* property owned */
+.user-property-title{
+  margin-top:10px;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.user-property ul{
+  list-style-type:none;
+  text-decoration:none;
+  margin-top:-15px;
+  font-size:14px;
+  color:purple;
+  text-transform:none;
+}
+
+/* ------------------------------------------------------- */
+/* property modal buttons */
+.user-property-btn {
+  background:none;
+  border: 1px solid #444;
+  font-size:14px;
+  width:120%;
+  padding:5% 10%;
+  margin-left:-20%;
+  margin-top:5%;
+  transition:.4s ease-in-out;
+}
+
+.user-property-btn:hover {
+  border: 1px solid #444;
+  color:white;
+  background:#444;
+  transition:.4s ease-in-out;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* speecific styling for background color of coresponding properties */
+
+.property-ave{
+  border: 1px solid #d2eaf5;
+  background:#d2eaf5;
+  color:white
+}
+
+.property-railroad{
+  border: 1px solid #cfcfcf;
+  background:#cfcfcf;
+  color:white
+}
+
+/* ================================================================================= */
+
+/* ---------------------------------------------------------------------- */
+/*  */
+#p8{
+  /*background-color: black;*/
+  height: 50px;
+  width:50px;
+}
+
+
+/*======================================================================================*/
+/*                       below is css for lobby.html
+/*------------------------------------------------------------------------------*/
+
+.playerInfo{
+  border: solid;
+
+}
